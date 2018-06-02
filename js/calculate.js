@@ -1,6 +1,4 @@
 
-
-
 var divResult = document.getElementById("divResult");
 
 var btnNum1 = document.getElementById("btnNum1");
@@ -10,23 +8,22 @@ var btnNum4 = document.getElementById("btnNum4");
 var btnNum5 = document.getElementById("btnNum5");
 
 
-
-
-var numLeft = [];
+var leftNums = [];
 
 function btnNum1Press() {
-    var btnNum1= 1;
-    divResult.innerHTML = btnNum1;
-    numLeft.push(btnNum1);
-    console.log(numLeft);
-
-    opSayHello();
-
+    // push 1 into array during each click
+    leftNums.push(1);
+    // combine the numbers in an Array
+    // display it on DOM
+    divResult.innerHTML = leftNums.join('');
+    console.log(leftNums);
 }
 
 
 function btnNum2Press() {
-    divResult.innerHTML = 2;
+    leftNums.push(2);
+    divResult.innerHTML = leftNums.join('');
+    console.log(leftNums);
 }
 
 function btnNum3Press() { divResult.innerHTML = btnNum3.innerHTML; }
