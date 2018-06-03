@@ -1,31 +1,44 @@
 
 var divResult = document.getElementById("divResult");
 
-var btnNum1 = document.getElementById("btnNum1");
-var btnNum2 = document.getElementById("btnNum2");
-var btnNum3 = document.getElementById("btnNum3");
-var btnNum4 = document.getElementById("btnNum4");
-var btnNum5 = document.getElementById("btnNum5");
+
+function btnNum1Press() { toDisplay(1); }
+function btnNum2Press() { toDisplay(2); }
+function btnNum3Press() { toDisplay(3); }
+function btnNum4Press() { toDisplay(4); }
+function btnNum5Press() { toDisplay(5); }
+
+function btnPlus() { toDisplay('+'); }
+
+// the numbers will display on screen
+var tempoNums = [];
+
+var printInput;
 
 
-var leftNums = [];
-
-function btnNum1Press() {
+function toDisplay(targetNum) {// a method to display Numbers
     // push 1 into array during each click
-    leftNums.push(1);
+    tempoNums.push(targetNum);
     // combine the numbers in an Array
+    printInput = tempoNums.join('');
     // display it on DOM
-    divResult.innerHTML = leftNums.join('');
-    console.log(leftNums);
+    divResult.innerHTML = printInput;
+    // info
+    console.log("[toDisplay()] tempoNums: " + tempoNums);
+    console.log("[toDisplay()] printInput: " + printInput);
+}
+
+function btnEqualTo(){
+    // calculate 
+    var result = eval(printInput);
+    console.log("[btnEqualto()] result: " + result);
+    // disply =
+    toDisplay('=');
+    // display result
+    toDisplay(result);
+    // reset calculator
+    tempoNums = [];
 }
 
 
-function btnNum2Press() {
-    leftNums.push(2);
-    divResult.innerHTML = leftNums.join('');
-    console.log(leftNums);
-}
 
-function btnNum3Press() { divResult.innerHTML = btnNum3.innerHTML; }
-function btnNum4Press() { divResult.innerHTML = btnNum4.innerHTML; }
-function btnNum5Press() { divResult.innerHTML = btnNum5.innerHTML; }
