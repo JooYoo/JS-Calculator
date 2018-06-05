@@ -1,6 +1,8 @@
+// the numbers will display on screen
+var tempoNums = [];
+var printInput;
 
 var divResult = document.getElementById("divResult");
-
 
 function btnNum1Press() { toDisplay(1); }
 function btnNum2Press() { toDisplay(2); }
@@ -9,11 +11,14 @@ function btnNum4Press() { toDisplay(4); }
 function btnNum5Press() { toDisplay(5); }
 
 function btnPlus() { toDisplay('+'); }
+function btnReset(){ 
+    console.log('[btnRset()]');
+    // clean tempoNumber() container 
+    tempoNums = [];
+    // clean DOM up
+    divResult.innerHTML = ' ';
+}
 
-// the numbers will display on screen
-var tempoNums = [];
-
-var printInput;
 
 
 function toDisplay(targetNum) {// a method to display Numbers
