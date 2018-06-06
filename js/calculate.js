@@ -20,7 +20,7 @@ function btnMinus() { toDisplay('-'); }
 function btnTimes() { toDisplay('*'); }
 function btnDivide() { toDisplay('/'); }
 function btnEqualTo(){
-    // calculate 
+    // calculate to get the result
     var result = eval(printInput);
     console.log("[btnEqualto()] result: " + result);
     // disply =
