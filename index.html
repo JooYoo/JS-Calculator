@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +8,60 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Calculator</title>
 </head>
+
 <body>
-    <h1>Calculate</h1>
-    <div id="divResult" aria-placeholder="ok">test:)</div>
-    <div></div>
-    <button> </button>
-    <button> </button>
-    <button> </button>
-    <button id="btnPlus" onclick="btnPlus()">+</button>
-    <div></div>
-    <button id="btnNum7" onclick="btnNum7Press()">7</button>
-    <button id="btnNum8" onclick="btnNum8Press()">8</button>
-    <button id="btnNum9" onclick="btnNum9Press()">9</button>
-    <button id="btnMinus" onclick="btnMinus()">-</button>
-    <div></div>
-    <button id="btnNum4" onclick="btnNum4Press()">4</button>
-    <button id="btnNum5" onclick="btnNum5Press()">5</button>
-    <button id="btnNum6" onclick="btnNum6Press()">6</button>
-    <button id="btnTimes" onclick="btnTimes()">x</button>
-    
-    <div></div>
-    <button id="btnNum1" onclick="btnNum1Press()">1</button>
-    <button id="btnNum2" onclick="btnNum2Press()">2</button>
-    <button id="btnNum3" onclick="btnNum3Press()">3</button>
-    <button id="btnDivide" onclick="btnDivide()">/</button>
-    <div></div>
-    <button id="btnNum0" onclick="btnNum0Press()">0</button>
-    <button id="btnDot" onclick="btnDotPress()">.</button>
-    <button id="btnReset" onclick="btnReset()">c</button>
-    <button id="btnEqualTo" onclick="btnEqualTo()">=</button>
-    <div></div>
-  
-    
-    <div class="card bg-light mb-3" style="max-width: 20rem;">
-        <div class="card-header">0</div>
-        <div class="card-body">
-            <h5 class="card-title"> Here is Card Title</h5>
-            <p class="card-text"> Here is quick card text</p>
+    <div class="jumbotron vertical-center" style="background:transparent !important" class="jumbotron">
+        <div class="container mx-auto">
+            <div class="row">
+                <div class="col-3">
+                    <!-- left -->
+                </div>
+                <div class="col-6">
+                    <div class="card bg-light mb-3 shadow-lg" >
+                        <div class="card-header bg-dark border-dark" style="color: white; font-weight: bolder">Yu's Calculator</div>
+                        <div id="divResult" class="card-header" style="font-size: 40px; padding-left: 30px">0</div>
+                        <div class="card-body ">
+                            <!-- <h5 class="card-title">Card Title</h5>
+                            <p class="card-text"> Card text</p> -->
+                            <div></div>
+                            <button class="btn btn-dark"> </button>
+                            <button class="btn btn-dark"> </button>
+                            <button class="btn btn-dark"> </button>
+                            <button id="btnPlus"  class="btn btn-dark" onclick="btnPlus()">+</button>
+                            <div></div >
+                            <button id="btnNum7"  class="btn btn-dark" onclick="btnNum7Press()">7</button>
+                            <button id="btnNum8"  class="btn btn-dark" onclick="btnNum8Press()">8</button>
+                            <button id="btnNum9"  class="btn btn-dark" onclick="btnNum9Press()">9</button>
+                            <button id="btnMinus" class="btn btn-dark" onclick="btnMinus()">-</button>
+                            <div></div>
+                            <button id="btnNum4"   class="btn btn-dark" onclick="btnNum4Press()">4</button>
+                            <button id ="btnNum5"  class="btn btn-dark" onclick="btnNum5Press()">5</button>
+                            <button id ="btnNum6"  class="btn btn-dark" onclick="btnNum6Press()">6</button>
+                            <button id ="btnTimes" class="btn btn-dark" onclick="btnTimes()">x</button>
+                            <div></div> 
+                            <button id="btnNum1"   class="btn btn-dark" onclick="btnNum1Press()">1</button>
+                            <button id="btnNum2"   class="btn btn-dark" onclick="btnNum2Press()">2</button>
+                            <button id="btnNum3"   class="btn btn-dark" onclick="btnNum3Press()">3</button>
+                            <button id="btnDivide" class="btn btn-dark" onclick="btnDivide()">/</button>
+                            <div></div>
+                            <button id="btnNum0"    class = "btn btn-dark" onclick="btnNum0Press()">0</button>
+                            <button id="btnDot"     class = "btn btn-dark" onclick="btnDot()">.</button>
+                            <button id="btnReset"   class = "btn btn-dark" onclick="btnReset()">c</button>
+                            <button id="btnEqualTo" class = "btn btn-dark" onclick="btnEqualTo()">=</button>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- right -->
+                </div>
+            </div>
         </div>
     </div>
-    
-    
-
     <script src="js/calculate.js"></script>
 </body>
+
 </html>

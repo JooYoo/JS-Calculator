@@ -15,6 +15,7 @@ function btnNum8Press() { toDisplay(8); }
 function btnNum9Press() { toDisplay(9); }
 function btnNum0Press() { toDisplay(0); }
 
+function btnDot() { toDisplay("."); }
 function btnPlus() { toDisplay('+'); }
 function btnMinus() { toDisplay('-'); }
 function btnTimes() { toDisplay('*'); }
@@ -36,7 +37,7 @@ function btnReset(){
     // clean tempoNumber() container 
     tempoNums = [];
     // clean DOM up
-    divResult.innerHTML = ' ';
+    divResult.innerHTML = 0;
 }
 
 function toDisplay(targetNum) {// a method to display Numbers

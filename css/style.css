@@ -1,0 +1,25 @@
+.vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    font-size: 40px;
+}
+
+#btnEqualTo{
+    background-color: darkorange;
+    border-color: darkorange;
+    box-shadow: 20px;
+}
+
+.card {
+    width: 480px;
+}
