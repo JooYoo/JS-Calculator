@@ -1,6 +1,6 @@
 {
     "short_name":"Calculator",
-    "name":"ToBuy",
+    "name":"Calculator",
     "description":"My second PWA app",
     "display":"standalone",
     "orientation":"portrait",
