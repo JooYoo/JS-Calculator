@@ -1,6 +1,7 @@
 // the numbers will display on screen
 var tempoNums = [];
 var printInput;
+var result;
 
 var divResult = document.getElementById("divResult");
 
@@ -20,24 +21,21 @@ function btnPlus() { toDisplay('+'); }
 function btnMinus() { toDisplay('-'); }
 function btnTimes() { toDisplay('*'); }
 function btnDivide() { toDisplay('/'); }
+
 function btnEqualTo(){
     // calculate to get the result
-    var result = eval(printInput);
+    result = eval(printInput);
     console.log("[btnEqualto()] result: " + result);
+
+     // reset calculator
+     tempoNums = [];
+
+    //todo: display in new line
     // disply =
-    toDisplay('=');
+    // toDisplay('=');
     // display result
     toDisplay(result);
-    // reset calculator
-    tempoNums = [];
-}
-
-function btnReset(){ 
-    console.log('[btnRset()]');
-    // clean tempoNumber() container 
-    tempoNums = [];
-    // clean DOM up
-    divResult.innerHTML = 0;
+   
 }
 
 function toDisplay(targetNum) {// a method to display Numbers
@@ -50,6 +48,15 @@ function toDisplay(targetNum) {// a method to display Numbers
     // info
     console.log("[toDisplay()] tempoNums: " + tempoNums);
     console.log("[toDisplay()] printInput: " + printInput);
+}
+
+
+function btnReset(){ 
+    console.log('[btnRset()]');
+    // clean tempoNumber() container 
+    tempoNums = [];
+    // clean DOM up
+    divResult.innerHTML = 0;
 }
 
 
