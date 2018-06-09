@@ -2,6 +2,7 @@
 var tempoNums = [];
 var printInput;
 var result;
+var isResult = false;
 
 var divResult = document.getElementById("divResult");
 
@@ -16,29 +17,35 @@ function btnNum8Press() { toDisplay(8); }
 function btnNum9Press() { toDisplay(9); }
 function btnNum0Press() { toDisplay(0); }
 
-function btnDot() { toDisplay("."); }
-function btnPlus() { toDisplay('+'); }
-function btnMinus() { toDisplay('-'); }
-function btnTimes() { toDisplay('*'); }
-function btnDivide() { toDisplay('/'); }
+function btnDot() { if(isResult){ toDisplay(0); } toDisplay("."); }
+function btnPlus() { isResult = false; toDisplay('+'); }
+function btnMinus() { isResult = false; toDisplay('-'); }
+function btnTimes() { isResult = false; toDisplay('*'); }
+function btnDivide() { isResult = false; toDisplay('/'); }
 
-function btnEqualTo(){
+function btnEqualTo() {
     // calculate to get the result
     result = eval(printInput);
     console.log("[btnEqualto()] result: " + result);
 
-     // reset calculator
-     tempoNums = [];
+    // reset calculator
+    tempoNums = [];
 
-    //todo: display in new line
-    // disply =
-    // toDisplay('=');
+
     // display result
     toDisplay(result);
-   
+    // switch
+    isResult = true;
+
 }
 
 function toDisplay(targetNum) {// a method to display Numbers
+    // 
+    if (isResult) {
+        tempoNums = [];
+        isResult = false;
+    }
+
     // push 1 into array during each click
     tempoNums.push(targetNum);
     // combine the numbers in an Array
@@ -51,7 +58,7 @@ function toDisplay(targetNum) {// a method to display Numbers
 }
 
 
-function btnReset(){ 
+function btnReset() {
     console.log('[btnRset()]');
     // clean tempoNumber() container 
     tempoNums = [];
