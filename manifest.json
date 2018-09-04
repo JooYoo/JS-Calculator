@@ -3,8 +3,8 @@
     "name":"Calculator",
     "description":"My second PWA app",
     "display":"standalone",
-    "orientation":"portrait",
-    "start_url":"index.html?launcher=true",
+    "orientation":"portrait-primary",
+    "start_url":"/index.html",
     "theme_color":"#ffffff",
     "background_color":"#ffffff",
     "icons": [
