@@ -4,7 +4,7 @@
     "description":"My second PWA app",
     "display":"standalone",
     "orientation":"portrait-primary",
-    "start_url":"index.html",
+    "start_url":"/index.html",
     "theme_color":"#ffffff",
     "background_color":"#ffffff",
     "icons": [
